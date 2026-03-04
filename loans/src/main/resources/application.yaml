@@ -1,15 +1,14 @@
 server:
-  port: 8080
+  port: 8090
 spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
   h2:
     console:
       enabled: true
-      path: /h2-console
-  datasource:
-    url: jdbc:h2:file:./data/testdb
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: ''
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -26,11 +25,12 @@ spring:
 build:
   version: "3.0"
 
-accounts:
-  message: "Welcome to EazyBank accounts related local APIs"
+loans:
+  message: "Welcome to EazyBank loans related local APIs"
   contactDetails:
-    name: "John Doe - Developer"
-    email: "john@eazybank.com"
+    name: "Amaal Grega - Developer"
+    email: "amaal@eazybank.com"
   onCallSupport:
-    - (555) 555-1234
-    - (555) 555-1345
+    - (452) 456-2176
+    - (546) 764-8934
+
